@@ -13,11 +13,14 @@ echo "    <link rel=\"stylesheet\" href=\"style.css\">\n";
 echo "</head>\n";
 echo "<body>\n";
 
+setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'portuguese');
+date_default_timezone_set('America/Sao_Paulo');
 $monthTime = getMonthTime();
 
 echo "<header>\n";
 echo "    <a href=\"?month=" . prevMonth($monthTime) . "\">Anterior</a>\n";
-echo "    <h1>" . date('F Y', $monthTime) . "</h1>\n";
+// echo "    <h1>" . date('F Y', $monthTime) . "</h1>\n";
+echo "    <h2>" . ucfirst(strftime('%B de %Y', $monthTime)) . "</h2>\n";
 echo "    <a href=\"?month=" . nextMonth($monthTime) . "\">Próximo</a>\n";
 echo "</header>\n";
 
