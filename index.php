@@ -50,9 +50,12 @@ for ($row = 0; $row < 6; $row++) {
     for ($column = 0; $column < 7; $column++) {
         if (date('Y-m', $startDate) !== date('Y-m', $monthTime)) {
             echo "            <td class=\"other-month\">\n";
+        } else if ($startDate === strtotime(date('Y-m-d'))) {
+            echo "            <td class=\"today\">\n";
         } else {
             echo "            <td>\n";
         }
+
         echo date('j', $startDate);
         echo "            </td>\n";
 

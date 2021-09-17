@@ -11,15 +11,23 @@ table {
 
 table th {
     padding: 20px;
+    color: #fff;
+    background-color: #004D40;
 }
 
 table td {
     font-size: 2em;
     font-weight: bold;
+    background-color: #80CBC4;
 }
 
 table td.other-month {
     opacity: .5;
+}
+
+table td.today {
+    color: #fff;
+    background-color: #00796B;
 }
 
 table td, table th {
@@ -31,4 +39,19 @@ header {
     justify-content: space-around;
     align-items: center;
     height: 100px;
+    background-color: #B2EBF2;
+}
+
+a:link, a:visited {
+	text-decoration: none;
+    color: #424242;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #757575
+}
+
+a:active {
+	text-decoration: none
 }
